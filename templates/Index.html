@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <!-- w3 css link -->
+    <link rel="stylesheet" href="{% static 'boxicons/css/boxicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'w3.css' %}">
+    <style>
+        body {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            background-color: crimson;
+            color: whitesmoke;
+        }
+
+
+
+        [type=submit] {
+            margin-top: 5%;
+        }
+
+        [type=radio] {
+            margin-top: 5%;
+        }
+
+        [type=text],
+        [type=email] {
+            margin-top: 5%;
+            box-shadow: 0 2px 5px 0 whitesmoke;
+        }
+
+        button{
+
+        }
+
+        i {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form action="/submit" method="POST">
+        {% csrf_token %}
+            <h1 id="heading" class="bx bx-tada">Feedback</h1><br>
+            <i class="bx bx-user w3-xlarge w3-center"></i>
+            <input type="text" class="w3-round w3-card" placeholder="Enter Your Name" name="name"
+                required><br>
+            <i class="bx bx-mail-send  w3-xlarge w3-center"></i>
+            <input type="email" class="w3-round w3-card" placeholder="Enter Your E-Mail ID" name="email"
+                required><br>
+            <i class="bx bx-comment w3-xlarge w3-center"></i>
+            <input type="text"  class="w3-round w3-card" placeholder="Enter Your comment" name="comment"
+                required><br>
+            <button type="submit" class=" w3-btn w3-xlarge  w3-text-white outline-none">submit</button>
+        </form>
+    </center>
+</body>
+
+</html>
