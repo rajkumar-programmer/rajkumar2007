@@ -1,2 +1,2 @@
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['rajkumar2007.herokuapp.com']
