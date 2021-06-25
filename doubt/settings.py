@@ -25,7 +25,7 @@ SECRET_KEY = 'y@*-8+%2dkrx9^tw1^w36%emu2ts6s+w^y0(m+%@45ayor16d^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rajkumar2007.herokuapp.com']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'doubt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/app/doubt/templates'],
+        'DIRS': ['/app/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
